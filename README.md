@@ -38,7 +38,9 @@ Deamon uninstaller ✅
 
 **INSTALL DEPENDENCYS!**
 node.js (apt install nodejs)
+
 npm (apt install npm)
+
 axios (npm install axios)
 
 ```
