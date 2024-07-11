@@ -5,8 +5,11 @@ This is an unofficial script made by Blare so it is not associated with Skyport 
 
 # Features
 Panel installer ✅
+
 Deamon installer ✅
+
 Panel uninstaller ✅
+
 Deamon uninstaller ✅
 
 # OS Supported with script
