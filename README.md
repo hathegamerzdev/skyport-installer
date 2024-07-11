@@ -45,7 +45,7 @@ axios (npm install axios)
 bash <(curl -s https://raw.githubusercontent.com/blaresrv/skyport-installer/main/installer.sh)
 ```
 
-When you install panel or node so to run them type ``node.`` and your panel will be accessible on https://localhost:3001 if you changed port so it will https://localhost:<port> 
+When you install panel or node so to run them type ``node.`` and your panel will be accessible on https://localhost:3001 if you changed port so it will https://localhost:port
 
 
 Make sure to check http://skyport.dev so you can know more about their panel
