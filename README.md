@@ -34,5 +34,21 @@ Deamon uninstaller ✅
 
 *Some os not supported like mac and windows!*
 
+# Installation 
+
+**INSTALL DEPENDENCYS!**
+node.js (apt install nodejs)
+npm (apt install npm)
+axios (npm install axios)
+
+```
+bash <(curl -s https://raw.githubusercontent.com/ismamilahi/skyport-installer/main/install_skyport.sh)
+```
+
+When you install panel or node so to run them type ``node.`` and your panel will be accessible on https://localhost:3001 if you changed port so it will https://localhost:<port> 
+
+
+Make sure to check http://skyport.dev so you can know more about their panel
+
 # Support
 Join [Blare Discord](https://discord.com/invite/g85mVP4vhN) to get script related support to get panel support join [SkyPort](https://discord.com/invite/skyport)
