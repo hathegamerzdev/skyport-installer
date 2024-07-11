@@ -17,7 +17,7 @@ check_os() {
 # Function to install Skyport panel
 install_panel() {
     git clone https://github.com/skyportlabs/panel/
-    cd panel
+    cd /var/www/skyport/panel
     npm install
     npm run seed
     npm run createUser
@@ -29,7 +29,7 @@ install_panel() {
 # Function to install Skyport node
 install_node() {
     git clone https://github.com/skyportlabs/skyportd
-    cd skyportd
+    cd  /var/www/skyport/daemon
     npm install
     cd ..
     echo "Thanks for using the script."
