@@ -37,6 +37,7 @@ Deamon uninstaller ✅
 # Installation 
 
 **INSTALL DEPENDENCYS!**
+
 node.js (apt install nodejs)
 
 npm (apt install npm)
