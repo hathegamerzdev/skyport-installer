@@ -12,6 +12,10 @@ Panel uninstaller ✅
 
 Deamon uninstaller ✅
 
+Panel updater ✅
+
+Demon updater ✅
+
 # OS Supported with script
 
 
