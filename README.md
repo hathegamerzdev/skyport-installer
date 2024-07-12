@@ -40,14 +40,6 @@ Demon updater ✅
 
 # Installation 
 
-**INSTALL DEPENDENCYS!**
-
-node.js (apt install nodejs)
-
-npm (apt install npm)
-
-axios (npm install axios)
-
 ```
 bash <(curl -s https://raw.githubusercontent.com/blaresrv/skyport-installer/main/installer.sh)
 ```
