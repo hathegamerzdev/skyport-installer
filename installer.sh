@@ -1,3 +1,6 @@
+Here's the updated script without the "Made by Blare team!" text:
+
+```bash
 #!/bin/bash
 
 # Function to check OS compatibility
@@ -18,19 +21,21 @@ check_os() {
 install_dependencies() {
     echo "Checking for required dependencies..."
 
-    # Check and install Node.js
-    if ! command -v node &> /dev/null; then
-        echo "Node.js not found, installing..."
+    # Check and install Node.js (version 18 or higher)
+    if ! command -v node &> /dev/null || [[ $(node -v | cut -d. -f1 | cut -dv -f2) -lt 18 ]]; then
+        echo "Node.js not found or version is less than 18, installing..."
         if [[ "$OS" == "Ubuntu" || "$OS" == "Debian" ]]; then
-            curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+            sudo apt-get remove -y nodejs
+            curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
             sudo apt-get install -y nodejs
         elif [[ "$OS" == "CentOS" ]]; then
-            curl -fsSL https://rpm.nodesource.com/setup_14.x | sudo bash -
+            sudo yum remove -y nodejs
+            curl -fsSL https://rpm.nodesource.com/setup_18.x | sudo bash -
             sudo yum install -y nodejs
         fi
         check_error "Installing Node.js"
     else
-        echo "Node.js is already installed."
+        echo "Node.js is already installed and version is 18 or higher."
     fi
 
     # Check and install npm
@@ -58,16 +63,26 @@ install_dependencies() {
     echo "All dependencies are installed."
 }
 
+# Function to create a random user
+create_random_user() {
+    USERNAME=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 10 | head -n 1)
+    PASSWORD=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 10 | head -n 1)
+    echo "Creating user with username: $USERNAME and password: $PASSWORD"
+    npm run createUser -- --username "$USERNAME" --password "$PASSWORD"
+    echo "User created with username: $USERNAME and password: $PASSWORD"
+}
+
 # Function to install Skyport panel
 install_panel() {
     git clone https://github.com/skyportlabs/panel/
     cd panel
     npm install
     npm run seed
-    npm run createUser
+    create_random_user
+    node .
+    echo "Your panel is accessible on http://localhost:3001"
     cd ..
     echo "Thanks for using the script."
-    echo "Made by Blare team!"
 }
 
 # Function to install Skyport node
@@ -77,7 +92,6 @@ install_node() {
     npm install
     cd ..
     echo "Thanks for using the script."
-    echo "Made by Blare team!"
 }
 
 # Function to install both Skyport panel and daemon
@@ -95,7 +109,6 @@ uninstall_panel() {
     echo "Skyport Panel uninstalled."
     read -p "Press Enter to continue..."
     echo "Thanks for using the script."
-    echo "Made by Blare team!"
 }
 
 # Function to uninstall Skyport node
@@ -107,7 +120,6 @@ uninstall_node() {
     echo "Skyport Daemon uninstalled."
     read -p "Press Enter to continue..."
     echo "Thanks for using the script."
-    echo "Made by Blare team!"
 }
 
 # Function to update Skyport panel
@@ -156,7 +168,6 @@ update_panel() {
     echo "Skyport Panel updated."
     read -p "Press Enter to continue..."
     echo "Thanks for using the script."
-    echo "Made by Blare team!"
 }
 
 # Function to update Skyport daemon
@@ -172,7 +183,6 @@ update_daemon() {
     echo "Skyport Daemon updated."
     read -p "Press Enter to continue..."
     echo "Thanks for using the script."
-    echo "Made by Blare team!"
 }
 
 # Function to check for errors
@@ -227,3 +237,4 @@ case $choice in
         exit 1
         ;;
 esac
+```
