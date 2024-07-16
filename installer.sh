@@ -1,5 +1,3 @@
-Here's the updated script without the "Made by Blare team!" text:
-
 ```bash
 #!/bin/bash
 
@@ -90,6 +88,7 @@ install_node() {
     git clone https://github.com/skyportlabs/skyportd
     cd skyportd
     npm install
+    node .
     cd ..
     echo "Thanks for using the script."
 }
