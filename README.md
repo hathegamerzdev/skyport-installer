@@ -51,3 +51,6 @@ Make sure to check http://skyport.dev so you can know more about their panel
 
 # Support
 Join [Lynix Discord](https://discord.com/invite/g85mVP4vhN) to get script related support to get panel support join [SkyPort](https://discord.com/invite/skyport)
+
+# Note
+Dont use v1.0 and v2.0 for installation they have bugs
