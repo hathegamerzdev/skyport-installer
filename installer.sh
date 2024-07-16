@@ -73,7 +73,6 @@ create_random_user() {
 install_panel() {
     git clone https://github.com/skyportlabs/panel/
     cd panel
-    npm install
     npm run seed
     create_random_user
     node .
@@ -86,7 +85,6 @@ install_panel() {
 install_node() {
     git clone https://github.com/skyportlabs/skyportd
     cd skyportd
-    npm install
     node .
     cd ..
     echo "Thanks for using the script."
