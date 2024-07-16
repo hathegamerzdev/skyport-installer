@@ -1,4 +1,3 @@
-```bash
 #!/bin/bash
 
 # Function to check OS compatibility
