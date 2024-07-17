@@ -41,7 +41,7 @@ Demon updater ✅
 # Installation 
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/blaresrv/skyport-installer/main/installer.sh)
+bash <(curl -s https://raw.githubusercontent.com/lynixlabs/skyport-installer/main/installer.sh)
 ```
 
 
