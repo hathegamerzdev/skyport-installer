@@ -4,7 +4,7 @@
 check_os() {
     OS=$(lsb_release -si)
     VERSION=$(lsb_release -sr)
-    if [[ "$OS" == "Ubuntu" && ("$VERSION" == "22.04" || "$VERSION" == "24.04") ]] ||
+    if [[ "$OS" == "Ubuntu" && ("$VERSION" == "20.04" || "$VERSION" == "22.04" || "$VERSION" == "24.04") ]] ||
        [[ "$OS" == "Debian" && ("$VERSION" == "11" || "$VERSION" == "12") ]] ||
        [[ "$OS" == "CentOS" && ("$VERSION" == "7" || "$VERSION" == "8" || "$VERSION" == "9" || "$VERSION" == "10" || "$VERSION" == "11") ]]; then
         echo "Supported OS detected: $OS $VERSION"
